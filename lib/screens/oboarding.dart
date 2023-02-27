@@ -10,8 +10,6 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
-  String? sidedText = 'Log In';
-  @override
   Widget build(BuildContext context) {
     // TODO Controller to keep track of which page we're on
     PageController _controller = PageController();

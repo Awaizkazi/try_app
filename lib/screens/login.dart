@@ -9,107 +9,104 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/login.png'),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Container(
-          child: Stack(
-            children: [
-              Container(
-                padding: EdgeInsets.only(left: 350, right: 10, top: 50),
-                child: Text(
-                  'Log In',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5,
-                    right: 20,
-                    left: 20),
-                child: Column(
-                  children: [
-                    Text(
-                      'MEY',
-                      style: TextStyle(color: Colors.black, fontSize: 30),
-                    ),
-                    SizedBox(height: 100),
-                    LoginElevatedButton(
-                      buttonBgColor: Colors.amber,
-                      buttonLabel: 'Sign Up with Email',
-                      buttonIcon: (Icons.email_outlined),
-                    ),
-                    SizedBox(height: 20),
-                    LoginElevatedButton(
-                      buttonBgColor: Colors.white,
-                      buttonLabel: 'f    Continue with Facebook',
-                    ),
-                  ],
-                ),
-              ),
-            ],
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/login.png'),
+            fit: BoxFit.cover,
           ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 110.0, left: 30),
+              child: Text(
+                'Log into\n your account',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 30, right: 30),
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.2),
+              child: Column(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Enter your email",
+                      labelText: "Username/Email",
+                      labelStyle: new TextStyle(
+                        color: const Color(0xFF424242),
+                      ),
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Enter password",
+                      labelText: "Password",
+                      labelStyle: new TextStyle(
+                        color: const Color(0xFF424242),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            CheckboxListTile(
+              value: isChecked,
+              title: Text("Remember me"),
+              onChanged: (newBool) {
+                setState(
+                  () {
+                    isChecked = newBool!;
+                  },
+                );
+              },
+              controlAffinity: ListTileControlAffinity.leading,
+            ),
+            ButtonOnLoginScreen(),
+          ],
         ),
       ),
     );
   }
 }
 
-class LoginElevatedButton extends StatelessWidget {
-  //TODO To make a Paramters Optional assign it in {} and at the time of declare there is ? added in Variables ex :   final String? buttonLabel;
-  final String? buttonLabel;
-  final IconData? buttonIcon;
-  final Color? buttonBgColor;
-
-  LoginElevatedButton({
+class ButtonOnLoginScreen extends StatelessWidget {
+  const ButtonOnLoginScreen({
     super.key,
-    this.buttonLabel,
-    this.buttonIcon,
-    this.buttonBgColor,
   });
 
   @override
   Widget build(BuildContext context) {
+    String title;
     return Container(
-      child: Column(
-        children: [
-          ElevatedButton.icon(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const OnBoardingScreen()),
-              );
-            },
-            label: Text(
-              buttonLabel!,
-              style: TextStyle(
-                  color: Colors.indigo,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18),
-            ),
-            icon: Icon(
-              buttonIcon,
-              color: Colors.indigo,
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: buttonBgColor,
-              fixedSize: Size(340, 50),
-              elevation: 10,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
+      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      width: MediaQuery.of(context).size.width / 0.2,
+      height: 50,
+      child: ElevatedButton(
+        onPressed: () {},
+        child: Text(
+          'Login',
+          style: TextStyle(color: Colors.white, fontSize: 25),
+        ),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.black54,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
           ),
-        ],
+        ),
       ),
     );
   }
