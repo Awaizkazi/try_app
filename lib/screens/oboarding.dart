@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -8,23 +9,13 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  late PageController _pageController;
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _pageController = PageController(initialPage: 0);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _pageController.dispose();
-  }
-
   String? sidedText = 'Log In';
   @override
   Widget build(BuildContext context) {
+    // TODO Controller to keep track of which page we're on
+    PageController _controller = PageController();
+
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -37,22 +28,41 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         body: Column(
           children: [
             Expanded(
-              child: PageView.builder(
-                controller: _pageController,
-                itemBuilder: (context, index) => OnBoardingContent(
-                  title: 'Welcome',
-                  description:
-                      'Discover New Spring Collection\n Everyday with MEY',
-                ),
+              child: Stack(
+                children: [
+                  // TODO  Page Views
+                  PageView(
+                    controller: _controller,
+                    children: [
+                      //TODO OnBoarding Screen 1
+                      OnBoardingContent(
+                          title: 'Welcome',
+                          description:
+                              'Discover New Spring Collection\n Everyday with MEY|'),
+                      //TODO OnBoarding Screen 2
+                      OnBoardingContent(
+                          title: 'Browse',
+                          description:
+                              'We Connect to your\nfavourite online brands so let\s\nbrowse it with MEY|'),
+                      //TODO OnBoarding Screen 3
+                      OnBoardingContent(
+                          title: 'Ready, Shop',
+                          description:
+                              'Find the perfect collection\n for you on MEY|'),
+                    ],
+                  ),
+                  // TODO Smooth Page Indicator
+                  Container(
+                    child:
+                        SmoothPageIndicator(controller: _controller, count: 3),
+                    alignment: Alignment(0, 0.40),
+                  ),
+                ],
               ),
             ),
             SizedBox(
               child: FloatingActionButton(
-                onPressed: () {
-                  _pageController.nextPage(
-                      duration: Duration(milliseconds: 200),
-                      curve: Curves.ease);
-                },
+                onPressed: () {},
                 backgroundColor: Colors.amberAccent,
                 child: Icon(
                   Icons.arrow_forward,
@@ -65,20 +75,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       ),
     );
   }
-}
-
-// TODO Class OnBoard
-class OnBoard {
-  final String titles, description;
-
-  OnBoard({required this.titles, required this.description});
-
-  final List<OnBoard> demo_data = [
-    OnBoard(
-      titles: 'Welcome',
-      description: 'Discover New Spring Collection\n Everyday with MEY',
-    ),
-  ];
 }
 
 class OnBoardingContent extends StatelessWidget {
