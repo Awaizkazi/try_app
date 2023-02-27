@@ -8,6 +8,20 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  late PageController _pageController;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController(initialPage: 0);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _pageController.dispose();
+  }
+
   String? sidedText = 'Log In';
   @override
   Widget build(BuildContext context) {
@@ -20,13 +34,51 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: OnBoardingContent(
-          title: 'Welcome',
-          description: 'Discover New Spring Collection\n Everyday with MEY',
+        body: Column(
+          children: [
+            Expanded(
+              child: PageView.builder(
+                controller: _pageController,
+                itemBuilder: (context, index) => OnBoardingContent(
+                  title: 'Welcome',
+                  description:
+                      'Discover New Spring Collection\n Everyday with MEY',
+                ),
+              ),
+            ),
+            SizedBox(
+              child: FloatingActionButton(
+                onPressed: () {
+                  _pageController.nextPage(
+                      duration: Duration(milliseconds: 200),
+                      curve: Curves.ease);
+                },
+                backgroundColor: Colors.amberAccent,
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
+}
+
+// TODO Class OnBoard
+class OnBoard {
+  final String titles, description;
+
+  OnBoard({required this.titles, required this.description});
+
+  final List<OnBoard> demo_data = [
+    OnBoard(
+      titles: 'Welcome',
+      description: 'Discover New Spring Collection\n Everyday with MEY',
+    ),
+  ];
 }
 
 class OnBoardingContent extends StatelessWidget {
