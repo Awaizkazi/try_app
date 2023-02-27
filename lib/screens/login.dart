@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:try_app/screens/oboarding.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -81,7 +82,13 @@ class LoginElevatedButton extends StatelessWidget {
       child: Column(
         children: [
           ElevatedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const OnBoardingScreen()),
+              );
+            },
             label: Text(
               buttonLabel!,
               style: TextStyle(
