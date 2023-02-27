@@ -8,6 +8,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  String? sidedText = 'Log In';
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,44 +20,82 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: Container(
-          child: Stack(
-            children: [
-              Container(
-                padding: EdgeInsets.only(left: 350, right: 10, top: 50),
-                child: Text(
-                  'Log In',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5,
-                    right: 20,
-                    left: 20),
-                child: Column(
-                  children: [
-                    Text(
-                      'MEY',
-                      style: TextStyle(color: Colors.black, fontSize: 30),
-                    ),
-                    SizedBox(height: 100),
-                    LoginElevatedButton(
-                      buttonBgColor: Colors.amber,
-                      buttonLabel: 'Sign Up with Email',
-                      buttonIcon: (Icons.email_outlined),
-                    ),
-                    SizedBox(height: 20),
-                    LoginElevatedButton(
-                      buttonBgColor: Colors.white,
-                      buttonLabel: 'f    Continue with Facebook',
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+        body: OnBoardingContent(
+          title: 'Welcome',
+          description: 'Discover New Spring Collection\n Everyday with MEY',
         ),
+      ),
+    );
+  }
+}
+
+class OnBoardingContent extends StatelessWidget {
+  const OnBoardingContent({
+    super.key,
+    required this.title,
+    required this.description,
+  });
+
+  final String? title, description;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Stack(
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: 350, right: 10, top: 50),
+            child: Text(
+              'Skip',
+              style: TextStyle(color: Colors.white, fontSize: 18),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.4,
+                right: 20,
+                left: 20),
+            child: Column(
+              children: [
+                Text(
+                  title!,
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                Spacer(),
+                Text(
+                  description!,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 19),
+                ),
+                Spacer(flex: 3),
+                LoginElevatedButton(
+                  buttonBgColor: Colors.white,
+                  buttonLabel: 'Start Shopping',
+                ),
+                SizedBox(height: 20),
+                RichText(
+                  text: TextSpan(
+                    text: 'Already have an account?',
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                    children: [
+                      TextSpan(
+                        text: 'Login',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Spacer(),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -87,7 +126,7 @@ class LoginElevatedButton extends StatelessWidget {
               style: TextStyle(
                   color: Colors.indigo,
                   fontWeight: FontWeight.bold,
-                  fontSize: 18),
+                  fontSize: 17),
             ),
             icon: Icon(
               buttonIcon,
@@ -95,6 +134,7 @@ class LoginElevatedButton extends StatelessWidget {
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: buttonBgColor,
+              elevation: 10,
               fixedSize: Size(340, 50),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),

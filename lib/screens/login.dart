@@ -103,6 +103,7 @@ class LoginElevatedButton extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: buttonBgColor,
               fixedSize: Size(340, 50),
+              elevation: 10,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
