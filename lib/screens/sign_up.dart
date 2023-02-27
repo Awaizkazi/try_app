@@ -66,7 +66,6 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration(
                       hintText: "Enter password",
                       labelText: "Password",
-                      
                       labelStyle: new TextStyle(
                         color: const Color(0xFF424242),
                       ),
@@ -77,7 +76,8 @@ class _SignUpState extends State<SignUp> {
             ),
             CheckboxListTile(
               value: isChecked,
-              title: Text("Remember me"),
+              title: Text(
+                  'By Signing up you agree to the terms of\nservices and privacy policy'),
               onChanged: (newBool) {
                 setState(
                   () {
