@@ -29,7 +29,7 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.only(top: 110.0, left: 30),
               child: Text(
-                'Log into\n your account',
+                'Create\n your account',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
@@ -45,8 +45,8 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   TextField(
                     decoration: InputDecoration(
-                      hintText: "Enter your email",
-                      labelText: "Username/Email",
+                      hintText: "Enter your Name",
+                      labelText: "Your Name",
                       labelStyle: new TextStyle(
                         color: const Color(0xFF424242),
                       ),
@@ -54,8 +54,19 @@ class _SignUpState extends State<SignUp> {
                   ),
                   TextField(
                     decoration: InputDecoration(
+                      hintText: "Enter your email",
+                      labelText: "Email",
+                      labelStyle: new TextStyle(
+                        color: const Color(0xFF424242),
+                      ),
+                    ),
+                  ),
+                  TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
                       hintText: "Enter password",
                       labelText: "Password",
+                      
                       labelStyle: new TextStyle(
                         color: const Color(0xFF424242),
                       ),
