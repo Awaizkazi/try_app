@@ -53,21 +53,37 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                   // TODO Smooth Page Indicator
                   Container(
-                    child:
-                        SmoothPageIndicator(controller: _controller, count: 3),
-                    alignment: Alignment(0, 0.40),
+                    alignment: Alignment(0.8, 0.40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        //TODO  Skip
+                        Container(
+                          // margin: EdgeInsets.all(12),
+                          padding:
+                              EdgeInsets.only(left: 300, right: 10, bottom: 20),
+                          child: GestureDetector(
+                            onTap: () {
+                              _controller.jumpToPage(2);
+                            },
+                            child: Text(
+                              'Skip',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: SmoothPageIndicator(
+                              controller: _controller, count: 3),
+                        ),
+
+                        // TODO NEXT or Done
+                      ],
+                    ),
                   ),
                 ],
-              ),
-            ),
-            SizedBox(
-              child: FloatingActionButton(
-                onPressed: () {},
-                backgroundColor: Colors.amberAccent,
-                child: Icon(
-                  Icons.arrow_forward,
-                  color: Colors.black,
-                ),
               ),
             ),
           ],
@@ -92,10 +108,10 @@ class OnBoardingContent extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.only(left: 350, right: 10, top: 50),
-            child: Text(
-              'Skip',
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
+            // child: Text(
+            //   'Skip',
+            //   style: TextStyle(color: Colors.white, fontSize: 18),
+            // ),
           ),
           Container(
             padding: EdgeInsets.only(
