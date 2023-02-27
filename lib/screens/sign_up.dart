@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:try_app/screens/oboarding.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpState extends State<SignUp> {
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {

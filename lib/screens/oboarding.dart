@@ -105,13 +105,6 @@ class OnBoardingContent extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 350, right: 10, top: 50),
-            // child: Text(
-            //   'Skip',
-            //   style: TextStyle(color: Colors.white, fontSize: 18),
-            // ),
-          ),
-          Container(
             padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.4,
                 right: 20,
