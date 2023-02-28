@@ -26,6 +26,30 @@ class _HomeScreen3State extends State<HomeScreen3> {
                 CustomContainerForImges(
                   pathImage: 'assets/images/home/banner7.png',
                 ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      CustomCircleAvatar(
+                        image:
+                            'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                      ),
+                      CustomCircleAvatar(
+                        image:
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU',
+                      ),
+                      CustomCircleAvatar(
+                        image:
+                            'https://media.istockphoto.com/id/998518584/photo/preschooler.jpg?b=1&s=170667a&w=0&k=20&c=FYXdsPvoiRIlj2EdnkZwWDDqf9c4g7xyUW6xIcwb-M0=',
+                      ),
+                      CustomCircleAvatar(
+                        image:
+                            'https://foyr.com/learn/wp-content/uploads/2022/01/importance-of-accessories-in-interior-design.jpg',
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -55,6 +79,36 @@ class CustomContainerForImges extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
         ),
       ],
+    );
+  }
+}
+
+class CustomCircleAvatar extends StatelessWidget {
+  final String? image;
+  CustomCircleAvatar({super.key, this.image});
+
+  @override
+  Widget build(BuildContext context) {
+    var index = 0;
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Column(
+        children: [
+          Container(
+            margin: EdgeInsets.all(15),
+            child: CircleAvatar(
+              radius: 38,
+              backgroundImage: NetworkImage(image!),
+            ),
+          ),
+          SizedBox(height: 10),
+          Container(
+            width: 80,
+            child:
+                Text('Label for Avatar #$index', textAlign: TextAlign.center),
+          ),
+        ],
+      ),
     );
   }
 }
