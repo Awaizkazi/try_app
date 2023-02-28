@@ -20,7 +20,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Image.asset('assets/images/mey_logo.png'),
+          title: Image.asset('assets/images/home/mey_logo.png'),
           actions: [
             IconButton(
               icon: const Icon(

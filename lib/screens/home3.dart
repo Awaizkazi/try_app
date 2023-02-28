@@ -12,48 +12,40 @@ class HomeScreen3 extends StatefulWidget {
 class _HomeScreen3State extends State<HomeScreen3> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        extendBodyBehindAppBar: true,
-        body: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 60),
-            child: Column(
+    return Container(
+      child: Column(
+        children: [
+          CustomContainerForImges(
+            pathImage: 'assets/images/home/banner6.png',
+          ),
+          CustomContainerForImges(
+            pathImage: 'assets/images/home/banner7.png',
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                CustomContainerForImges(
-                  pathImage: 'assets/images/home/banner6.png',
+                CustomCircleAvatar(
+                  image:
+                      'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
                 ),
-                CustomContainerForImges(
-                  pathImage: 'assets/images/home/banner7.png',
+                CustomCircleAvatar(
+                  image:
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU',
                 ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      CustomCircleAvatar(
-                        image:
-                            'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                      ),
-                      CustomCircleAvatar(
-                        image:
-                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU',
-                      ),
-                      CustomCircleAvatar(
-                        image:
-                            'https://media.istockphoto.com/id/998518584/photo/preschooler.jpg?b=1&s=170667a&w=0&k=20&c=FYXdsPvoiRIlj2EdnkZwWDDqf9c4g7xyUW6xIcwb-M0=',
-                      ),
-                      CustomCircleAvatar(
-                        image:
-                            'https://foyr.com/learn/wp-content/uploads/2022/01/importance-of-accessories-in-interior-design.jpg',
-                      ),
-                    ],
-                  ),
+                CustomCircleAvatar(
+                  image:
+                      'https://media.istockphoto.com/id/998518584/photo/preschooler.jpg?b=1&s=170667a&w=0&k=20&c=FYXdsPvoiRIlj2EdnkZwWDDqf9c4g7xyUW6xIcwb-M0=',
+                ),
+                CustomCircleAvatar(
+                  image:
+                      'https://foyr.com/learn/wp-content/uploads/2022/01/importance-of-accessories-in-interior-design.jpg',
                 ),
               ],
             ),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -105,7 +97,7 @@ class CustomCircleAvatar extends StatelessWidget {
           Container(
             width: 80,
             child:
-                Text('Label for Avatar #$index', textAlign: TextAlign.center),
+                Text('Label for Asatar #$index', textAlign: TextAlign.center),
           ),
         ],
       ),

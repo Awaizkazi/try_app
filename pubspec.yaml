@@ -28,12 +28,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  # Image Carousel Slider
+  bottom_navy_bar: ^6.0.0
   carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.2
+
+
   flutter:
     sdk: flutter
   smooth_page_indicator: ^1.0.1
+  
 
 dev_dependencies:
   flutter_lints: ^2.0.0
