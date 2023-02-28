@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:try_app/screens/home2.dart';
 import 'package:try_app/screens/sign_up.dart';
 import 'package:try_app/screens/welcome.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUp(),
+      home: HomeScreen2(),
       initialRoute: '/',
     );
   }

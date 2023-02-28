@@ -10,6 +10,38 @@ class HomeScreen2 extends StatefulWidget {
 class _HomeScreen2State extends State<HomeScreen2> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.favorite_outline,
+              color: Colors.black,
+            ),
+            tooltip: 'Your favorites',
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.shopping_bag_outlined,
+              color: Colors.black,
+            ),
+            tooltip: 'Open shopping cart',
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.sort_outlined,
+              color: Colors.black,
+            ),
+            tooltip: 'Search by Filter',
+            onPressed: () {},
+          ),
+        ],
+      ),
+    );
   }
 }
