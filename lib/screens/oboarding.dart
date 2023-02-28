@@ -74,7 +74,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
                         Center(
                           child: SmoothPageIndicator(
-                              controller: _controller, count: 3),
+                            controller: _controller,
+                            count: 3,
+                          ),
                         ),
 
                         // TODO NEXT or Done
