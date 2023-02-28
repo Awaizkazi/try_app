@@ -54,21 +54,21 @@ class _HomeScreen2State extends State<HomeScreen2> {
             child: Column(
               children: [
                 CustomContainerForImges(
-                  pathImage: 'assets/images/banner1.png',
+                  pathImage: 'assets/images/home/banner1.png',
                 ),
                 CustomCarouselSlider(),
                 // SmoothPageIndicator(controller: _controller, count: index),
                 CustomContainerForImges(
-                  pathImage: 'assets/images/banner2.png',
+                  pathImage: 'assets/images/home/banner2.png',
                 ),
                 CustomContainerForImges(
-                  pathImage: 'assets/images/banner3.png',
+                  pathImage: 'assets/images/home/banner3.png',
                 ),
                 CustomContainerForImges(
-                  pathImage: 'assets/images/banner4.png',
+                  pathImage: 'assets/images/home/banner4.png',
                 ),
                 CustomContainerForImges(
-                  pathImage: 'assets/images/banner5.png',
+                  pathImage: 'assets/images/home/banner5.png',
                 ),
                 HomeScreen3(),
               ],

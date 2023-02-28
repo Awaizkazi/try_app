@@ -15,56 +15,16 @@ class _HomeScreen3State extends State<HomeScreen3> {
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: Image.asset('assets/images/mey_logo.png'),
-          actions: [
-            IconButton(
-              icon: const Icon(
-                Icons.favorite_outline,
-                color: Colors.black,
-              ),
-              tooltip: 'Your favorites',
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(
-                Icons.shopping_bag_outlined,
-                color: Colors.black,
-              ),
-              tooltip: 'Open shopping cart',
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(
-                Icons.sort_outlined,
-                color: Colors.black,
-              ),
-              tooltip: 'Search by Filter',
-              onPressed: () {},
-            ),
-          ],
-        ),
         body: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 60),
             child: Column(
               children: [
                 CustomContainerForImges(
-                  pathImage: 'assets/images/banner1.png',
+                  pathImage: 'assets/images/home/banner6.png',
                 ),
                 CustomContainerForImges(
-                  pathImage: 'assets/images/banner2.png',
-                ),
-                CustomContainerForImges(
-                  pathImage: 'assets/images/banner3.png',
-                ),
-                CustomContainerForImges(
-                  pathImage: 'assets/images/banner4.png',
-                ),
-                CustomContainerForImges(
-                  pathImage: 'assets/images/banner5.png',
+                  pathImage: 'assets/images/home/banner7.png',
                 ),
               ],
             ),
