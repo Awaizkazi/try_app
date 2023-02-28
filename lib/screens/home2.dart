@@ -99,3 +99,24 @@ class CustomContainerForImges extends StatelessWidget {
     );
   }
 }
+
+class CarouselSlider extends StatefulWidget {
+  const CarouselSlider({super.key});
+
+  @override
+  State<CarouselSlider> createState() => _CarouselSliderState();
+}
+
+class _CarouselSliderState extends State<CarouselSlider> {
+  final urlImages = [
+    'https://rb.gy/bho5m2',
+    'https://rb.gy/bho5m2',
+    'https://rb.gy/bho5m2',
+    'https://rb.gy/bho5m2',
+    'https://rb.gy/bho5m2'
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
