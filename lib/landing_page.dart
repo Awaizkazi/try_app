@@ -27,7 +27,10 @@ class _Profile_ScreenState extends State<Profile_Screen> {
           ),
         ),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.dark_mode_outlined))
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.dark_mode_outlined),
+          ),
         ],
       ),
       body: SingleChildScrollView(),

@@ -28,6 +28,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Profile_Screen(),
       initialRoute: '/',
+      theme: ThemeData(
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
     );
   }
 }

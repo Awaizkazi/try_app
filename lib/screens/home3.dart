@@ -99,6 +99,7 @@ class CustomCircleAvatar extends StatelessWidget {
             child:
                 Text('Label for Asatar #$index', textAlign: TextAlign.center),
           ),
+          // Container(width: MediaQuery.of(context).size.width,)
         ],
       ),
     );
