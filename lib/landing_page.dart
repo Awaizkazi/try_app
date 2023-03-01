@@ -86,6 +86,28 @@ class _Profile_ScreenState extends State<Profile_Screen> {
               SizedBox(height: 10),
               Divider(),
               // MENU
+              ProfileMenuWidget(
+                  title: 'Settings', icon: Icons.cottage, onPress: () {}),
+              ProfileMenuWidget(
+                  title: 'Billing Details', icon: Icons.wallet, onPress: () {}),
+              ProfileMenuWidget(
+                  title: 'User Management',
+                  icon: Icons.verified_user_outlined,
+                  onPress: () {}),
+              Divider(color: Colors.grey),
+              SizedBox(height: 10),
+
+              ProfileMenuWidget(
+                  title: 'Information',
+                  icon: Icons.info_outline,
+                  onPress: () {}),
+              ProfileMenuWidget(
+                title: 'LogOut',
+                icon: Icons.logout,
+                onPress: () {},
+                endIcon: false,
+                textColor: Colors.red,
+              ),
             ],
           ),
         ),
@@ -128,7 +150,10 @@ class ProfileMenuWidget extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: Theme.of(context).textTheme.bodySmall?.apply(color: textColor),
+        style: Theme.of(context)
+            .textTheme
+            .bodySmall
+            ?.apply(color: textColor, fontSizeDelta: 5.0),
       ),
       trailing: endIcon
           ? Container(
@@ -150,4 +175,4 @@ class ProfileMenuWidget extends StatelessWidget {
 
 
 //! https://www.youtube.com/watch?v=d4KFeRdZMcw
-// TODO Video 5: 31 se dekna hain
+// TODO Video 12: 42 se dekna hain
