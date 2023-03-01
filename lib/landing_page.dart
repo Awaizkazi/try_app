@@ -33,7 +33,20 @@ class _Profile_ScreenState extends State<Profile_Screen> {
           ),
         ],
       ),
-      body: SingleChildScrollView(),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              SizedBox(
+                child: Image(
+                  image: AssetImage('assets/images/home/banner4.png'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
