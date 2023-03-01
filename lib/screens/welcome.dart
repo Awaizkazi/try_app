@@ -86,7 +86,8 @@ class LoginElevatedButton extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const OnBoardingScreen()),
+                  builder: (context) => const OnBoardingScreen(),
+                ),
               );
             },
             label: Text(

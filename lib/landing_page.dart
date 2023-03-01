@@ -34,13 +34,41 @@ class _Profile_ScreenState extends State<Profile_Screen> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(8.0),
+        child: Center(
           child: Column(
             children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU'),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Owaiz Kazi',
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+              Text(
+                'Owaizkazi78@gmail.com',
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+              SizedBox(height: 10),
               SizedBox(
-                child: Image(
-                  image: AssetImage('assets/images/home/banner4.png'),
+                width: 200,
+                child: ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.edit,
+                    color: Colors.black,
+                  ),
+                  label: Text(
+                    'Edit Profile',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+                    side: BorderSide.none,
+                    shape: StadiumBorder(),
+                  ),
                 ),
               ),
             ],
@@ -53,4 +81,4 @@ class _Profile_ScreenState extends State<Profile_Screen> {
 
 
 //! https://www.youtube.com/watch?v=d4KFeRdZMcw
-// TODO Video 4: 00 se dekna hain
+// TODO Video 5: 31 se dekna hain
