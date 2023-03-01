@@ -9,10 +9,13 @@ import 'package:try_app/screens/sign_up.dart';
 import 'package:try_app/screens/welcome.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
+import 'landing_page.dart';
 import 'screens/login.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NavigateScreen(),
+      home: LandingPage(),
       initialRoute: '/',
     );
   }
