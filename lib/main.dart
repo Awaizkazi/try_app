@@ -9,6 +9,7 @@ import 'package:try_app/screens/sign_up.dart';
 import 'package:try_app/screens/welcome.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
+import 'ex1.dart';
 import 'landing_page.dart';
 import 'screens/login.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LandingPage(),
+      home: Profile_Screen(),
       initialRoute: '/',
     );
   }

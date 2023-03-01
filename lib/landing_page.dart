@@ -1,26 +1,40 @@
 import 'package:flutter/material.dart';
 
-class LandingPage extends StatefulWidget {
-  const LandingPage({super.key});
+class Profile_Screen extends StatefulWidget {
+  const Profile_Screen({super.key});
 
   @override
-  State<LandingPage> createState() => _LandingPageState();
+  State<Profile_Screen> createState() => _Profile_ScreenState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _Profile_ScreenState extends State<Profile_Screen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        children: [
-          Container(
-            child: Text('Mens'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'My Account',
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+        // backgroundColor: Colors.white,
+        elevation: 0,
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
           ),
-          Container(
-            child: Text('Womens'),
-          ),
+        ),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.dark_mode_outlined))
         ],
       ),
+      body: SingleChildScrollView(),
     );
   }
 }
+
+
+//! https://www.youtube.com/watch?v=d4KFeRdZMcw
+// TODO Video 4: 00 se dekna hai
