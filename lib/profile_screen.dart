@@ -18,7 +18,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
           'Profile',
           style: Theme.of(context).textTheme.headlineSmall,
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xff535353),
         elevation: 0,
         centerTitle: true,
         actions: [
@@ -31,83 +31,84 @@ class _Profile_ScreenState extends State<Profile_Screen> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          color: Colors.grey,
-          width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.symmetric(vertical: 10),
-          padding: EdgeInsets.all(10),
-          child: Column(
-            children: [
-              CircleAvatar(
-                radius: 55,
-                backgroundColor: Colors.white,
-                child: CircleAvatar(
-                  radius: 50,
-                  backgroundImage: NetworkImage(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU'),
-                ),
+      body: Container(
+        color: Color(0xff535353),
+        width: MediaQuery.of(context).size.width,
+        height: 200,
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 55,
+              backgroundColor: Colors.white,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU'),
               ),
-              SizedBox(height: 10),
-              Text(
-                'Owaiz Kazi',
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall!
-                    .copyWith(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Owaizkazi78@gmail.com',
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-              SizedBox(height: 20),
-              // SizedBox(
-              //   height: 50,
-              //   width: 250,
-              //   child: ElevatedButton.icon(
-              //     onPressed: () {},
-              //     icon: Icon(
-              //       Icons.edit,
-              //       color: Colors.white,
-              //     ),
-              //     label: Text(
-              //       'Edit Profile',
-              //       style: TextStyle(color: Colors.white, fontSize: 18),
-              //     ),
-              //     style: ElevatedButton.styleFrom(
-              //       backgroundColor: Colors.blue,
-              //       side: BorderSide.none,
-              //       shape: StadiumBorder(),
-              //     ),
-              //   ),
-              // ),
-              // SizedBox(height: 10),
-              // Divider(),
-              // // MENU
-              // ProfileMenuWidget(
-              //     title: 'Settings', icon: Icons.cottage, onPress: () {}),
-              // ProfileMenuWidget(
-              //     title: 'Billing Details', icon: Icons.wallet, onPress: () {}),
-              // ProfileMenuWidget(
-              //     title: 'User Management',
-              //     icon: Icons.verified_user_outlined,
-              //     onPress: () {}),
-              // Divider(color: Colors.grey),
-              // SizedBox(height: 10),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Owaiz Kazi',
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineSmall!
+                  .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+            Text(
+              'Owaizkazi78@gmail.com',
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineSmall!
+                  .copyWith(color: Colors.white),
+            ),
 
-              // ProfileMenuWidget(
-              //     title: 'Information',
-              //     icon: Icons.info_outline,
-              //     onPress: () {}),
-              // ProfileMenuWidget(
-              //   title: 'LogOut',
-              //   icon: Icons.logout,
-              //   onPress: () {},
-              //   endIcon: false,
-              //   textColor: Colors.red,
-              // ),
-            ],
-          ),
+            // SizedBox(
+            //   height: 50,
+            //   width: 250,
+            //   child: ElevatedButton.icon(
+            //     onPressed: () {},
+            //     icon: Icon(
+            //       Icons.edit,
+            //       color: Colors.white,
+            //     ),
+            //     label: Text(
+            //       'Edit Profile',
+            //       style: TextStyle(color: Colors.white, fontSize: 18),
+            //     ),
+            //     style: ElevatedButton.styleFrom(
+            //       backgroundColor: Colors.blue,
+            //       side: BorderSide.none,
+            //       shape: StadiumBorder(),
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(height: 10),
+            // Divider(),
+            // // MENU
+            // ProfileMenuWidget(
+            //     title: 'Settings', icon: Icons.cottage, onPress: () {}),
+            // ProfileMenuWidget(
+            //     title: 'Billing Details', icon: Icons.wallet, onPress: () {}),
+            // ProfileMenuWidget(
+            //     title: 'User Management',
+            //     icon: Icons.verified_user_outlined,
+            //     onPress: () {}),
+            // Divider(color: Colors.grey),
+            // SizedBox(height: 10),
+
+            // ProfileMenuWidget(
+            //     title: 'Information',
+            //     icon: Icons.info_outline,
+            //     onPress: () {}),
+            // ProfileMenuWidget(
+            //   title: 'LogOut',
+            //   icon: Icons.logout,
+            //   onPress: () {},
+            //   endIcon: false,
+            //   textColor: Colors.red,
+            // ),
+          ],
         ),
       ),
     );
