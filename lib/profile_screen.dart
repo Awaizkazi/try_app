@@ -15,35 +15,33 @@ class _Profile_ScreenState extends State<Profile_Screen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'My Account',
+          'Profile',
           style: Theme.of(context).textTheme.headlineSmall,
         ),
-        // backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
-        ),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.dark_mode_outlined),
+            icon: Icon(
+              Icons.settings,
+              color: Colors.black,
+            ),
           ),
         ],
       ),
       body: SingleChildScrollView(
         child: Container(
+          color: Colors.grey,
+          width: MediaQuery.of(context).size.width,
           margin: EdgeInsets.symmetric(vertical: 10),
           padding: EdgeInsets.all(10),
           child: Column(
             children: [
               CircleAvatar(
                 radius: 55,
-                backgroundColor: Colors.blue.shade300,
+                backgroundColor: Colors.white,
                 child: CircleAvatar(
                   radius: 50,
                   backgroundImage: NetworkImage(
@@ -63,51 +61,51 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
               SizedBox(height: 20),
-              SizedBox(
-                height: 50,
-                width: 250,
-                child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.edit,
-                    color: Colors.white,
-                  ),
-                  label: Text(
-                    'Edit Profile',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    side: BorderSide.none,
-                    shape: StadiumBorder(),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Divider(),
-              // MENU
-              ProfileMenuWidget(
-                  title: 'Settings', icon: Icons.cottage, onPress: () {}),
-              ProfileMenuWidget(
-                  title: 'Billing Details', icon: Icons.wallet, onPress: () {}),
-              ProfileMenuWidget(
-                  title: 'User Management',
-                  icon: Icons.verified_user_outlined,
-                  onPress: () {}),
-              Divider(color: Colors.grey),
-              SizedBox(height: 10),
+              // SizedBox(
+              //   height: 50,
+              //   width: 250,
+              //   child: ElevatedButton.icon(
+              //     onPressed: () {},
+              //     icon: Icon(
+              //       Icons.edit,
+              //       color: Colors.white,
+              //     ),
+              //     label: Text(
+              //       'Edit Profile',
+              //       style: TextStyle(color: Colors.white, fontSize: 18),
+              //     ),
+              //     style: ElevatedButton.styleFrom(
+              //       backgroundColor: Colors.blue,
+              //       side: BorderSide.none,
+              //       shape: StadiumBorder(),
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(height: 10),
+              // Divider(),
+              // // MENU
+              // ProfileMenuWidget(
+              //     title: 'Settings', icon: Icons.cottage, onPress: () {}),
+              // ProfileMenuWidget(
+              //     title: 'Billing Details', icon: Icons.wallet, onPress: () {}),
+              // ProfileMenuWidget(
+              //     title: 'User Management',
+              //     icon: Icons.verified_user_outlined,
+              //     onPress: () {}),
+              // Divider(color: Colors.grey),
+              // SizedBox(height: 10),
 
-              ProfileMenuWidget(
-                  title: 'Information',
-                  icon: Icons.info_outline,
-                  onPress: () {}),
-              ProfileMenuWidget(
-                title: 'LogOut',
-                icon: Icons.logout,
-                onPress: () {},
-                endIcon: false,
-                textColor: Colors.red,
-              ),
+              // ProfileMenuWidget(
+              //     title: 'Information',
+              //     icon: Icons.info_outline,
+              //     onPress: () {}),
+              // ProfileMenuWidget(
+              //   title: 'LogOut',
+              //   icon: Icons.logout,
+              //   onPress: () {},
+              //   endIcon: false,
+              //   textColor: Colors.red,
+              // ),
             ],
           ),
         ),

@@ -10,7 +10,7 @@ import 'package:try_app/screens/on_boarding_1.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 import 'ex1.dart';
-import 'landing_page.dart';
+import 'profile_screen.dart';
 import 'screens/login.dart';
 
 void main() {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUp(),
+      home: OnBoarding_1(),
       initialRoute: '/',
       theme: ThemeData(
         brightness: Brightness.light,

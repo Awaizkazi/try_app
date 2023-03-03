@@ -14,7 +14,8 @@ class _OnBoarding_1State extends State<OnBoarding_1> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/login.png'),
+          image: NetworkImage(
+              'https://images.unsplash.com/photo-1514136649217-b627b4b9cfb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1vZGVsJTIwYmxhY2t8ZW58MHx8MHx8&w=1000&q=80'),
           fit: BoxFit.cover,
         ),
       ),
@@ -39,7 +40,10 @@ class _OnBoarding_1State extends State<OnBoarding_1> {
                   children: [
                     Text(
                       'MEY',
-                      style: TextStyle(color: Colors.black, fontSize: 30),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 100),
                     LoginElevatedButton(
