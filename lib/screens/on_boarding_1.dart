@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:try_app/screens/oboarding.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({super.key});
+class OnBoarding_1 extends StatefulWidget {
+  const OnBoarding_1({super.key});
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<OnBoarding_1> createState() => _OnBoarding_1State();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _OnBoarding_1State extends State<OnBoarding_1> {
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -13,7 +13,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      // backgroundColor: Colors.transparent,
       body: Container(
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -31,7 +31,7 @@ class _SignUpState extends State<SignUp> {
               child: Text(
                 'Create\n your account',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 30,
                   fontWeight: FontWeight.w500,
                 ),
