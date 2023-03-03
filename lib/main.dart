@@ -10,6 +10,7 @@ import 'package:try_app/screens/on_boarding_1.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 import 'ex1.dart';
+import 'Listview_builder_practice.dart';
 import 'profile_screen.dart';
 import 'screens/login.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Profile_Screen(),
+      home: ExampleListViewBuilder(),
       initialRoute: '/',
       theme: ThemeData(
         brightness: Brightness.light,

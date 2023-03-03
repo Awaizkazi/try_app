@@ -22,71 +22,79 @@ class Profile_Screen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 200,
-              color: Color(0xff535353),
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 55,
-                    backgroundColor: Colors.white,
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU'),
-                    ),
+      body: ProfileScreenMade(),
+    );
+  }
+}
+
+class ProfileScreenMade extends StatelessWidget {
+  const ProfileScreenMade({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 200,
+            color: Color(0xff535353),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 55,
+                  backgroundColor: Colors.white,
+                  child: CircleAvatar(
+                    radius: 50,
+                    backgroundImage: NetworkImage(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxVz2U6ihsCFFFniOjh2UaBXxg3W_dkiOpQ&usqp=CAU'),
                   ),
-                  SizedBox(height: 10),
-                  Text(
-                    'Owaiz Kazi',
-                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                        fontWeight: FontWeight.bold, color: Colors.white),
-                  ),
-                  Text(
-                    'Owaizkazi78@gmail.com',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineSmall!
-                        .copyWith(color: Colors.white, fontSize: 20),
-                  ),
-                ],
-              ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Owaiz Kazi',
+                  style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                      fontWeight: FontWeight.bold, color: Colors.white),
+                ),
+                Text(
+                  'Owaizkazi78@gmail.com',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall!
+                      .copyWith(color: Colors.white, fontSize: 20),
+                ),
+              ],
             ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Account Infromation',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineMedium!
-                          .copyWith(
-                              fontSize: 24,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                    ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Account Infromation',
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                        fontSize: 24,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            TextNames(
-              fullName: 'Full Name',
-              FullName: 'Marry Hanan',
-              EmailLabel: 'Email',
-              UserEmail: 'marrayhanan@gmail.com',
-              addressLabel: 'Address',
-              addressAns: '228 Jonathan Street..',
-            ),
-          ],
-        ),
+          ),
+          TextNames(
+            fullName: 'Full Name',
+            FullName: 'Marry Hanan',
+            EmailLabel: 'Email',
+            UserEmail: 'marrayhanan@gmail.com',
+            addressLabel: 'Address',
+            addressAns: '228 Jonathan Street..',
+          ),
+        ],
       ),
     );
   }
