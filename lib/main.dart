@@ -27,8 +27,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Profile_Screen(),
-
-
       initialRoute: '/',
       theme: ThemeData(
         brightness: Brightness.light,
@@ -36,7 +34,6 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-    
     );
   }
 }
