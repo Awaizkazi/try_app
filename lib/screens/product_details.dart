@@ -84,7 +84,7 @@ class ProductDetailsGrid extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 12.0,
           mainAxisSpacing: 10,
-          mainAxisExtent: 250),
+          mainAxisExtent: 300),
       itemCount: gridMap.length,
       itemBuilder: (context, index) {
         return Container(
@@ -102,8 +102,23 @@ class ProductDetailsGrid extends StatelessWidget {
                 child: Image.network(
                   // TODO  By using these we will call the varibles values by Index Wise starts from 0 to n
                   "${gridMap.elementAt(index)['images']}",
+                  height: 170,
+                  width: MediaQuery.of(context).size.width,
+
+                  fit: BoxFit.cover,
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("${gridMap.elementAt(index)['title']}"),
+                    SizedBox(height: 10),
+                    Text("${gridMap.elementAt(index)['price']}"),
+                  ],
+                ),
+              )
             ],
           ),
         );
