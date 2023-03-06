@@ -43,6 +43,16 @@ class _GridBState extends State<GridB> {
       'price': 'Rs. 1,699',
       'images': 'https://m.media-amazon.com/images/I/51+zP3-RQXL._SL1500_.jpg'
     },
+    {
+      "title": 'Oppo Enco Buds Bluetooth True Wireless in Ear Earbuds(TWS)',
+      'price': 'Rs. 1,699',
+      'images': 'https://m.media-amazon.com/images/I/51+zP3-RQXL._SL1500_.jpg'
+    },
+    {
+      "title": 'Oppo Enco Buds Bluetooth True Wireless in Ear Earbuds(TWS)',
+      'price': 'Rs. 1,699',
+      'images': 'https://m.media-amazon.com/images/I/51+zP3-RQXL._SL1500_.jpg'
+    },
   ];
   @override
   Widget build(BuildContext context) {
