@@ -39,17 +39,17 @@ class _Product_Details1State extends State<Product_Details1> {
           'https://i.gadgets360cdn.com/products/large/iqoo-neo-7-5g-db-709x800-1676531196.jpg'
     },
     {
-      "title": 'Oppo Enco Buds Bluetooth True Wireless in Ear Earbuds(TWS)',
+      "title": 'Oppo Enco Buds Bluetooth True Wireless',
       'price': 'Rs. 1,699',
       'images': 'https://m.media-amazon.com/images/I/51+zP3-RQXL._SL1500_.jpg'
     },
     {
-      "title": 'Oppo Enco Buds Bluetooth True Wireless in Ear Earbuds(TWS)',
+      "title": 'Oppo Enco Buds Bluetooth True Wireless',
       'price': 'Rs. 1,699',
       'images': 'https://m.media-amazon.com/images/I/51+zP3-RQXL._SL1500_.jpg'
     },
     {
-      "title": 'Oppo Enco Buds Bluetooth True Wireless in Ear Earbuds(TWS)',
+      "title": 'Oppo Enco Buds Bluetooth True Wireless',
       'price': 'Rs. 1,699',
       'images': 'https://m.media-amazon.com/images/I/51+zP3-RQXL._SL1500_.jpg'
     },
@@ -84,13 +84,13 @@ class ProductDetailsGrid extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 12.0,
           mainAxisSpacing: 10,
-          mainAxisExtent: 300),
+          mainAxisExtent: 330),
       itemCount: gridMap.length,
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16.0),
-            color: Colors.redAccent.shade100,
+            color: Colors.amberAccent.shade100,
           ),
           child: Column(
             children: [
@@ -113,12 +113,37 @@ class ProductDetailsGrid extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("${gridMap.elementAt(index)['title']}"),
-                    SizedBox(height: 10),
-                    Text("${gridMap.elementAt(index)['price']}"),
+                    Text(
+                      "${gridMap.elementAt(index)['title']}",
+                      style: Theme.of(context).textTheme.bodyMedium!.merge(
+                            TextStyle(
+                                fontWeight: FontWeight.w700, fontSize: 17),
+                          ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      "${gridMap.elementAt(index)['price']}",
+                      style: Theme.of(context).textTheme.bodySmall!.merge(
+                            TextStyle(
+                                fontWeight: FontWeight.w700, fontSize: 18),
+                          ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.favorite_border_outlined),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.add_shopping_cart),
+                        ),
+                      ],
+                    )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         );
