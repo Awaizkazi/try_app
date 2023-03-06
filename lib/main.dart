@@ -18,9 +18,7 @@ import 'screens/login.dart';
 import 'screens/product_details.dart';
 
 void main() {
-  runApp(
-    const MyApp(),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Product_Details1(),
+      home: ProductScreen1(),
       initialRoute: '/',
       theme: ThemeData(
         brightness: Brightness.light,
