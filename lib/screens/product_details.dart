@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GridB extends StatefulWidget {
-  const GridB({super.key});
+class Product_Details1 extends StatefulWidget {
+  const Product_Details1({super.key});
 
   @override
-  State<GridB> createState() => _GridBState();
+  State<Product_Details1> createState() => _Product_Details1State();
 }
 
-class _GridBState extends State<GridB> {
+class _Product_Details1State extends State<Product_Details1> {
   final List<Map<String, dynamic>> gridMap = [
     {
       "title": 'white sneaker with adidas logo',
@@ -60,7 +60,11 @@ class _GridBState extends State<GridB> {
       gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 20),
       itemCount: gridMap.length,
-      itemBuilder: (context, index) {},
+      itemBuilder: (context, index) {
+        return Container(
+          color: Colors.redAccent.shade100,
+        );
+      },
     );
   }
 }
