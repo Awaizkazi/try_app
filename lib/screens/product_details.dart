@@ -56,6 +56,11 @@ class _GridBState extends State<GridB> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GridView.builder(
+      gridDelegate:
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 20),
+      itemCount: gridMap.length,
+      itemBuilder: (context, index) {},
+    );
   }
 }
