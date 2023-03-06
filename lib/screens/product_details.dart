@@ -56,13 +56,56 @@ class _Product_Details1State extends State<Product_Details1> {
   ];
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(
+        padding: EdgeInsets.all(10),
+        children: [
+          ProductDetailsGrid(gridMap: gridMap),
+        ],
+      ),
+    );
+  }
+}
+
+class ProductDetailsGrid extends StatelessWidget {
+  const ProductDetailsGrid({
+    super.key,
+    required this.gridMap,
+  });
+
+  final List<Map<String, dynamic>> gridMap;
+
+  @override
+  Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 20),
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 12.0,
+          mainAxisSpacing: 10,
+          mainAxisExtent: 250),
       itemCount: gridMap.length,
       itemBuilder: (context, index) {
         return Container(
-          color: Colors.redAccent.shade100,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16.0),
+            color: Colors.redAccent.shade100,
+          ),
+          child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16.0),
+                  topRight: Radius.circular(16.0),
+                ),
+                child: Image.network(
+                  // TODO  By using these we will call the varibles values by Index Wise starts from 0 to n
+                  "${gridMap.elementAt(index)['images']}",
+                ),
+              ),
+            ],
+          ),
         );
       },
     );
