@@ -40,18 +40,20 @@ class home_2_2 extends StatelessWidget {
       body: ListView(
         children: [
           CustomContainer(
+            c_width: double.infinity,
             container_color: Colors.blue,
             img_path: 'assets/images/home2/free-shipping.png',
           ),
+          SizedBox(height: 10),
           CustomContainer(
-            c_height: 100.0,
+            // c_height: 100.0,
             container_color: Colors.amber,
-            img_path: 'assets/images/home/banner4.png',
+            img_path: 'assets/images/home2/free-shipping.png',
           ),
           CustomContainer(
             c_height: 200.0,
             container_color: Colors.teal,
-            img_path: 'assets/images/home/banner2.png',
+            img_path: 'assets/images/home2/free-shipping.png',
           ),
         ],
       ),
@@ -76,7 +78,7 @@ class CustomContainer extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: c_height,
-      child: Image.asset(img_path!),
+      child: Image.asset(img_path!, fit: BoxFit.cover),
       color: container_color,
     );
   }
