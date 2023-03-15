@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'home2.dart';
 
 class home_3_3 extends StatelessWidget {
   const home_3_3({super.key});
@@ -42,10 +41,23 @@ class home_3_3 extends StatelessWidget {
         children: [
           CustomContainer(
             c_width: double.infinity,
-            container_color: Colors.blue,
-            img_path: 'assets/images/home3/free-shipping.png',
+            img_path: 'assets/images/home3/womenbag.png',
           ),
           SizedBox(height: 7),
+          Row(
+            children: [
+              CustomContainer(
+                c_width: 50,
+                c_height: 300,
+                img_path: 'assets/images/home3/spring_collection.png',
+              ),
+              CustomContainer(
+                c_width: 50,
+                c_height: 300,
+                img_path: 'assets/images/home3/spring_collection.png',
+              ),
+            ],
+          ),
         ],
       ),
     );
@@ -69,7 +81,7 @@ class CustomContainer extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: c_height,
-      child: Image.asset(img_path!, fit: BoxFit.fitWidth),
+      child: Image.asset(img_path!),
       color: container_color,
     );
   }
