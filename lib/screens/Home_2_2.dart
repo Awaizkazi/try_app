@@ -58,7 +58,7 @@ class home_2_2 extends StatelessWidget {
                 c_width: 200.0,
                 c_height: 200.0,
                 container_color: Colors.blue,
-                img_path: 'assets/images/home/banner5.png',
+                img_path: 'assets/images/home/banner2.png',
               ),
             ],
           );
