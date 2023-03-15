@@ -37,32 +37,23 @@ class home_2_2 extends StatelessWidget {
           ),
         ],
       ),
-      body: ListView.builder(
-        itemCount: 5,
-        itemBuilder: (BuildContext context, int index) {
-          return Column(
-            children: [
-              CustomContainer(
-                c_width: 200.0,
-                c_height: 200.0,
-                container_color: Colors.blue,
-                img_path: 'assets/images/home/banner1.png',
-              ),
-              CustomContainer(
-                c_width: 200.0,
-                c_height: 200.0,
-                container_color: Colors.blue,
-                img_path: 'assets/images/home/banner4.png',
-              ),
-              CustomContainer(
-                c_width: 200.0,
-                c_height: 200.0,
-                container_color: Colors.blue,
-                img_path: 'assets/images/home/banner2.png',
-              ),
-            ],
-          );
-        },
+      body: ListView(
+        children: [
+          CustomContainer(
+            container_color: Colors.blue,
+            img_path: 'assets/images/home2/free-shipping.png',
+          ),
+          CustomContainer(
+            c_height: 100.0,
+            container_color: Colors.amber,
+            img_path: 'assets/images/home/banner4.png',
+          ),
+          CustomContainer(
+            c_height: 200.0,
+            container_color: Colors.teal,
+            img_path: 'assets/images/home/banner2.png',
+          ),
+        ],
       ),
     );
   }
@@ -83,7 +74,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: c_width,
+      width: MediaQuery.of(context).size.width,
       height: c_height,
       child: Image.asset(img_path!),
       color: container_color,
