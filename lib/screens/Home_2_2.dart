@@ -10,7 +10,7 @@ class home_2_2 extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Image.asset('assets/images/home/mey_logo.png'),
+        title: Image.asset('assets/images/home2/tryplore_logo.png'),
         actions: [
           SizedBox(
             height: 70,
@@ -44,16 +44,26 @@ class home_2_2 extends StatelessWidget {
             container_color: Colors.blue,
             img_path: 'assets/images/home2/free-shipping.png',
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 7),
           CustomContainer(
             // c_height: 100.0,
-            container_color: Colors.amber,
-            img_path: 'assets/images/home2/free-shipping.png',
+            img_path: 'assets/images/home2/Summer.png',
           ),
+          SizedBox(height: 7),
           CustomContainer(
-            c_height: 200.0,
-            container_color: Colors.teal,
-            img_path: 'assets/images/home2/free-shipping.png',
+            img_path: 'assets/images/home2/women_collection.png',
+          ),
+          SizedBox(height: 7),
+          CustomContainer(
+            img_path: "assets/images/home2/men_collection.png",
+          ),
+          SizedBox(height: 7),
+          CustomContainer(
+            img_path: 'assets/images/home2/Kids_collection.png',
+          ),
+          SizedBox(height: 7),  
+          CustomContainer(
+            img_path: 'assets/images/home2/accessories_collection.png',
           ),
         ],
       ),
@@ -78,7 +88,7 @@ class CustomContainer extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: c_height,
-      child: Image.asset(img_path!, fit: BoxFit.cover),
+      child: Image.asset(img_path!, fit: BoxFit.fitWidth),
       color: container_color,
     );
   }
