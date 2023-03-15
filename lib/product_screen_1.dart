@@ -140,55 +140,57 @@ class ProductDetailsGrid extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 12.0,
           mainAxisSpacing: 10,
-          mainAxisExtent: 180),
+          mainAxisExtent: 300),
       itemCount: gridMap.length,
       itemBuilder: (context, index) {
-        return Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16.0),
-            color: Colors.amberAccent.shade100,
-          ),
-          child: Column(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(16.0),
-                  topRight: Radius.circular(16.0),
-                ),
-                child: Image.network(
-                  // TODO  By using these we will call the varibles values by Index Wise starts from 0 to n
-                  "${gridMap.elementAt(index)['images']}",
-                  height: 170,
-                  width: MediaQuery.of(context).size.width,
-
-                  fit: BoxFit.cover,
-                ),
+        return Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16.0),
+                color: Colors.amberAccent.shade100,
+                border: Border.all(color: Colors.blueAccent),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     children: [
-              //       Text(
-              //         "${gridMap.elementAt(index)['title']}",
-              //         style: Theme.of(context).textTheme.bodyMedium!.merge(
-              //               TextStyle(
-              //                   fontWeight: FontWeight.w700, fontSize: 17),
-              //             ),
-              //       ),
-              //       SizedBox(height: 8),
-              //       Text(
-              //         "${gridMap.elementAt(index)['price']}",
-              //         style: Theme.of(context).textTheme.bodySmall!.merge(
-              //               TextStyle(
-              //                   fontWeight: FontWeight.w700, fontSize: 18),
-              //             ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-            ],
-          ),
+              child: Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0),
+                    ),
+                    child: Image.network(
+                      // TODO  By using these we will call the varibles values by Index Wise starts from 0 to n
+                      "${gridMap.elementAt(index)['images']}",
+                      height: 170,
+                      width: MediaQuery.of(context).size.width,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "${gridMap.elementAt(index)['title']}",
+                    style: Theme.of(context).textTheme.bodyMedium!.merge(
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
+                        ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    "${gridMap.elementAt(index)['price']}",
+                    style: Theme.of(context).textTheme.bodySmall!.merge(
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
+                        ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         );
       },
     );
