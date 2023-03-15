@@ -14,6 +14,7 @@ import 'Listview_builder_practice.dart';
 import 'home_demo.dart';
 import 'product_screen_1.dart';
 import 'profile_screen.dart';
+import 'screens/Home_2_2.dart';
 import 'screens/login.dart';
 import 'screens/product_details.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProductScreen1(),
+      home: home_2_2(),
       initialRoute: '/',
       theme: ThemeData(
         brightness: Brightness.light,
