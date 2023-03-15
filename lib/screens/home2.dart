@@ -116,6 +116,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
   final urlImages = [
     'https://thumbs.dreamstime.com/b/gateway-india-mumbai-gateway-india-arch-monument-built-th-century-mumbai-india-monument-was-138091856.jpg',
     'https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=',
+    'assets/images/home2/Summer.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -124,15 +125,15 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
         children: [
           CarouselSlider(
             options: CarouselOptions(
-              height: 200.0,
+              height: 250.0,
               autoPlay: true,
               enableInfiniteScroll: true,
               autoPlayInterval: Duration(seconds: 3),
               autoPlayAnimationDuration: Duration(milliseconds: 800),
               autoPlayCurve: Curves.fastOutSlowIn,
-              // viewportFraction: 1,
+              viewportFraction: 1,
               enlargeCenterPage: true,
-              enlargeStrategy: CenterPageEnlargeStrategy.height,
+              // enlargeStrategy: CenterPageEnlargeStrategy.height,
               onPageChanged: (index, reason) {
                 setState(() {
                   activeIndex = index;
@@ -144,12 +145,8 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                 builder: (BuildContext context) {
                   return Container(
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Image.network(
-                      urlImages.first,
-                      fit: BoxFit.cover,
-                    ),
+                    // margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    child: Image.asset('assets/images/home2/Summer.png'),
                   );
                 },
               );

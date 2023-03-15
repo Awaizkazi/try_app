@@ -1,11 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
 import 'home2.dart';
 
-class home_2_2 extends StatelessWidget {
-  const home_2_2({super.key});
+class home_3_3 extends StatelessWidget {
+  const home_3_3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,30 +43,9 @@ class home_2_2 extends StatelessWidget {
           CustomContainer(
             c_width: double.infinity,
             container_color: Colors.blue,
-            img_path: 'assets/images/home2/free-shipping.png',
+            img_path: 'assets/images/home3/free-shipping.png',
           ),
           SizedBox(height: 7),
-          // CustomContainer(
-          //   // c_height: 100.0,
-          //   img_path: 'assets/images/home2/Summer.png',
-          // ),
-          CustomCarouselSlider(),
-          SizedBox(height: 7),
-          CustomContainer(
-            img_path: 'assets/images/home2/women_collection.png',
-          ),
-          SizedBox(height: 7),
-          CustomContainer(
-            img_path: "assets/images/home2/men_collection.png",
-          ),
-          SizedBox(height: 7),
-          CustomContainer(
-            img_path: 'assets/images/home2/Kids_collection.png',
-          ),
-          SizedBox(height: 7),
-          CustomContainer(
-            img_path: 'assets/images/home2/accessories_collection.png',
-          ),
         ],
       ),
     );
